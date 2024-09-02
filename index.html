@@ -6,10 +6,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Etch a Sketch</title>
     <link rel="stylesheet" href="./style/reset.css">
+    <link rel="stylesheet" href="./style/style.css">
     <script defer src="./script.js"></script>
 </head>
 
 <body>
+
+    <h1>Etch A Sketch</h1>
+
+    <div>
+        <div class="options">
+            <div class="range">
+                <label for="range-value">Size</label>
+                <input type="range" id="range-value" name="range-value" min="10" max="100" value="10" />
+                <span class="range-text"></span>
+            </div>
+            <div class="buttons">
+                <button id="show-grid">Show Grid</button>
+                <button id="clear-grid">Clear</button>
+            </div>
+        </div>
+
+        <div class="container"></div>
+    </div>
 
 </body>
 
