@@ -25,6 +25,20 @@ function paintCell(cell) {
     }
 }
 
+function showGrid() {
+    const showGrid = showGridBtn.textContent === "Show Grid";
+    for (const cell of container.children) {
+        cell.classList.toggle("cell", showGrid);
+    }
+    showGridBtn.textContent = showGrid ? "Hide Grid" : "Show Grid";
+}
+
+function clearGrid() {
+    for (const cell of container.children) {
+        cell.style.background = "";
+    }
+}
+
 function randomNumber() {
     return Math.floor(Math.random() * 256);
 }
