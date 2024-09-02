@@ -42,3 +42,22 @@ function clearGrid() {
 function randomNumber() {
     return Math.floor(Math.random() * 256);
 }
+
+range.addEventListener("input", (event) => {
+    const size = event.target.value;
+    rangeText.textContent = size;
+    container.innerHTML = "";
+    makeGrid(size);
+});
+
+container.addEventListener("mouseover", paintCell)
+
+showGridBtn.addEventListener("click", showGrid)
+
+clearBtn.addEventListener("click", clearGrid);
+
+document.addEventListener("DOMContentLoaded", () => {
+    const defaultSize = range.value;
+    rangeText.textContent = defaultSize;
+    makeGrid(defaultSize);
+})
