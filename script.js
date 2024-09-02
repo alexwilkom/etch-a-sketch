@@ -17,3 +17,14 @@ function makeGrid(size) {
         container.appendChild(cell)
     }
 }
+
+function paintCell(cell) {
+    if (cell.target.id) {
+        cell.target.style.background =
+            `rgb(${randomNumber()}, ${randomNumber()}, ${randomNumber()})`;
+    }
+}
+
+function randomNumber() {
+    return Math.floor(Math.random() * 256);
+}
